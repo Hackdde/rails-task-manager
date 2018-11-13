@@ -1,0 +1,14 @@
+<form action="/tasks" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div>
+  <label for="name">Title: </label>
+  <input type="text" name="task[title]" id="title">
+  </div>
+  <div>
+  <label for="address">Details: </label>
+  <input type="text" name="task[details]" id="details">
+  <input type="hidden" name="task[completed]" id="completed" value="false">
+  </div>
+
+  <input type="submit" value="Create Task">
+</form>
